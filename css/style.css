@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+.contenedor-grid-area{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: 'header header' 'main main' 'footer footer';
+   gap: 10px;
+}
+.area-header{
+    grid-area: header;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 10px 10px;
+    border: 0.4px solid #22222280;
+}
+.barra-header{
+    display: none;
+}
+.imagen-header{
+   justify-self: end;
+}
+.perfil{
+    width: 50px;
+    height: 49px;
+    border-radius: 50%; 
+}
+/*main*/
+.area-main{
+    grid-area: main;
+}
+/*historias*/
+.contenedor-historias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid  #22222280 ;
+}
+.perfil-historia{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.historia-5, .historia-6, .historia-7{
+    display: none;
+}
+/*Post*/
+.contenedor-post{
+    background-color: #FFFFFF;
+    border: 0.4px solid #22222280 ;
+    margin: 20px;
+}
+.card-encabezado{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   background-color: #FFFFFF;
+   border-bottom: 0.4px solid #22222280;
+}
+.card-img{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card-img h3{
+    font-weight: 400;
+}.icono i{
+    font-size: 20px;
+    color: black;
+}
+
+.card-perfil{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.img-perfil{
+    width: 90%;
+    height: auto;
+}
+.card-iconos a{
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.comentario{
+    list-style: none;
+    padding: 5px 20px;
+}
+.comentario li{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.ver-comentario{
+    color: #A49B9B;
+}
+/*sidebar*/
+.area-sidebar{
+   display: none;
+}
+/*footer*/
+.area-footer{
+    grid-area: footer;
+    background-color: #222222;
+    color:#FFFFFF ;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px;
+}
+/*media desktop*/
+@media (min-width:1024px){
+    .contenedor-grid-area{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 'header header header' 'main main sidebar' 'footer footer footer';
+    }
+    .area-header{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 30px;
+        /*align-items: center;*/
+    }
+    .barra-header{
+        display: inline-block;
+        border: 0.3px solid #222222;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .contenedor-historias{
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 600px;
+        width: 100%;
+        margin: 10px auto 20px;
+    }
+    .historia-5, .historia-6, .historia-7{
+        display: flex;
+    }
+    .contenedor-post{
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto 60px;
+    }
+    .img-perfil{
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .card-texto{
+        margin-left: 25px;
+    }
+   .area-sidebar{
+    grid-area: sidebar;
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+     padding: 20px 40px 0 0;
+     margin-right: 30px;
+   }
+   .top-sugerencias{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+  .img-sugerencias, .seguir-1, .seguir-2{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+  }
+  .nombre-icono{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .sugerencias{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .seguir{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .boton{
+    color: #1CA0F6;
+    text-decoration: none;
+  }
+  .palabra-gris{
+    color: #808080;
+  }
+}
